@@ -26,13 +26,6 @@ public class Tank1 extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		Tank1 tank1 = new Tank1();
 	}
-
-class people{
-	int year,height;
-	people(){
-		
-	}
-}
 	// 構造函數
 	public Tank1() {
 		Record.readAllRecord();
