@@ -1,5 +1,5 @@
 
-//©Z§J¤j¾Ô
+//å¦å…‹å¤§æˆ°
 import java.util.*;
 
 import java.awt.event.*;
@@ -26,8 +26,6 @@ public class Tank1 extends JFrame implements ActionListener{
 		// TODO Auto-generated method stub
 		//Tank1 tank1 = new Tank1();
 		people a = new people();
-	    a.year = 5;
-	    System.out.print(a.year);
 	}
 
 class people{
@@ -36,30 +34,30 @@ class people{
 		
 	}
 }
-	// ºc³y¨ç¼Æ
+	// æ§‹é€ å‡½æ•¸
 	public Tank1() {
 		Record.readAllRecord();
 		sp = new StartPanel();
 
 		jmb = new JMenuBar();
-		jm1 = new JMenu("¿ï¶µ(O)");
+		jm1 = new JMenu("é¸é …(O)");
 		jm1.setMnemonic('O');
 
-		jmi1 = new JMenuItem("¶}©l¹CÀ¸(G)"/* ,new ImageIcon(" .jpg") */);
+		jmi1 = new JMenuItem("é–‹å§‹éŠæˆ²(G)"/* ,new ImageIcon(" .jpg") */);
 		jmi1.setMnemonic('G');
-		jmi2 = new JMenuItem("Ä~Äò¹CÀ¸(C)"/* ,new ImageIcon(" .jpg") */);
+		jmi2 = new JMenuItem("ç¹¼çºŒéŠæˆ²(C)"/* ,new ImageIcon(" .jpg") */);
 		jmi2.setMnemonic('C');
-		jmi3 = new JMenuItem("«O¦s¹CÀ¸(S)"/* ,new ImageIcon(" .jpg") */);
+		jmi3 = new JMenuItem("ä¿å­˜éŠæˆ²(S)"/* ,new ImageIcon(" .jpg") */);
 		jmi3.setMnemonic('S');
-		jmi4 = new JMenuItem("Â÷¶}¹CÀ¸(E)"/* ,new ImageIcon(" .jpg") */);
+		jmi4 = new JMenuItem("é›¢é–‹éŠæˆ²(E)"/* ,new ImageIcon(" .jpg") */);
 		jmi4.setMnemonic('E');
 		
 		Font fontb = new Font("SansSerif",Font.BOLD,20);
-		jb0 = new JButton("¶}©l¹CÀ¸");
+		jb0 = new JButton("é–‹å§‹éŠæˆ²");
 		jb0.setFont(fontb);
 		jb0.setBounds(500, 400, 150, 50);
 		
-		jb11 = new JButton("¿ï¾ÜÃö¥d");
+		jb11 = new JButton("é¸æ“‡é—œå¡");
 		jb11.setFont(fontb);
 		jb11.setBounds(200, 400, 150, 50);
 		
@@ -108,12 +106,12 @@ class people{
 		this.setVisible(true);
 	}
 
-	// «ö¤U¿ï¶µ
+	// æŒ‰ä¸‹é¸é …
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method stub
 
-		// ¶}©l¹CÀ¸
+		// é–‹å§‹éŠæˆ²
 		if (arg0.getActionCommand().equals("start")) {
 			
 			jmi3.addActionListener(this);
@@ -131,7 +129,7 @@ class people{
 
 		}
 
-		// Â÷¶}¹CÀ¸
+		// é›¢é–‹éŠæˆ²
 		if (arg0.getActionCommand().equals("leave")) {
 
 			Record.saveRecord();
@@ -140,7 +138,7 @@ class people{
 
 		}
 
-		// «O¦s¹CÀ¸
+		// ä¿å­˜éŠæˆ²
 		if (arg0.getActionCommand().equals("save")) {
 
 			Record record = new Record();
@@ -150,7 +148,7 @@ class people{
 
 		}
 
-		// Ä~Äò¹CÀ¸
+		// ç¹¼çºŒéŠæˆ²
 		if (arg0.getActionCommand().equals("continue")) {
 
 			gp = new GamePanel("continueGame");
@@ -168,7 +166,7 @@ class people{
 			
 			ChoosePanel cp = new ChoosePanel();
 			
-			Font font = new Font("¼Ğ·¢Åé",Font.BOLD,25);
+			Font font = new Font("æ¨™æ¥·é«”",Font.BOLD,25);
 			
 			jb1 = new JButton("1");
 			jb2 = new JButton("2");
@@ -186,8 +184,8 @@ class people{
 			jb1.addActionListener(this);
 			jb1.setActionCommand("start");
 
-			font = new Font("¼Ğ·¢Åé",Font.BOLD,50);
-			jl1 = new JLabel("¿ï¾ÜÃö¥d");
+			font = new Font("æ¨™æ¥·é«”",Font.BOLD,50);
+			jl1 = new JLabel("é¸æ“‡é—œå¡");
 			jl1.setFont(font);
 			
 			GridLayout grid1 = new GridLayout(4,0,10,10);
@@ -238,7 +236,7 @@ class StartPanel extends JPanel implements Runnable {
 			image3 =ImageIO.read(new File("Tank2.jpg"));
 			image4 =ImageIO.read(new File("plane.jpg"));
 		} catch (IOException e) {
-			// TODO ¦Û°Ê²£¥Íªº catch °Ï¶ô
+			// TODO è‡ªå‹•ç”¢ç”Ÿçš„ catch å€å¡Š
 			e.printStackTrace();
 		}
 	}
@@ -269,7 +267,7 @@ class StartPanel extends JPanel implements Runnable {
 	}
 	
 
-	// °{Ã{
+	// é–ƒçˆ
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
@@ -303,43 +301,43 @@ class ChoosePanel extends JPanel {
 }
 
 class GamePanel extends JPanel implements KeyListener, Runnable {
-	// ©w¸q§Úªº©Z§J(¦¨­ûÅÜ¶q)
+	// å®šç¾©æˆ‘çš„å¦å…‹(æˆå“¡è®Šé‡)
 	MyTank mytank = null;
-	// ¤l¼u
+	// å­å½ˆ
 	Bullet blt = null;
-	// ¼Ä¤H
+	// æ•µäºº
 	int etsize = 7;
 	EnemyTank et = null;
 	Vector<EnemyTank> ets = new Vector<>();
-	// Ãz¬µ
+	// çˆ†ç‚¸
 	Boom bm = null;
 	Vector<Boom> booms = new Vector<>();
-	// ¹Ï¤ù
+	// åœ–ç‰‡
 	Image image1 = null;
-	// ¸ü¤J¦ì¸m
+	// è¼‰å…¥ä½ç½®
 	Location location = null;
 	Vector<Location> locations = null;
-	// ­µ®Ä
+	// éŸ³æ•ˆ
 	playMusic music = new playMusic();
 
-	// ºc³y¨ç¼Æ
+	// æ§‹é€ å‡½æ•¸
 	public GamePanel(String flag) {
 		mytank = new MyTank(300, 300);
 
-		// ³Ğ«Ø¼Ä¤H©Z§J
+		// å‰µå»ºæ•µäººå¦å…‹
 
 		if (flag.equals("newGame")) {
 
 			for (int i = 0; i < etsize; i++) {
 
-				// ³Ğ«Ø©Z§J
+				// å‰µå»ºå¦å…‹
 				EnemyTank et = new EnemyTank((i + 1) * 100, 100, 2);
 
-				// ¥[¤Jvector
+				// åŠ å…¥vector
 				ets.add(et);
 				et.setEts(ets);
 
-				// ¼Ä¤H¶}©l²¾°Ê
+				// æ•µäººé–‹å§‹ç§»å‹•
 				Thread t = new Thread(et);
 				t.start();
 
@@ -352,15 +350,15 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 			for (int i = 0; i < locations.size(); i++) {
 
-				// ³Ğ«Ø©Z§J
+				// å‰µå»ºå¦å…‹
 				Location location = locations.get(i);
 				EnemyTank et = new EnemyTank(location.x, location.y, location.direction);
 
-				// ¥[¤Jvector
+				// åŠ å…¥vector
 				ets.add(et);
 				et.setEts(ets);
 
-				// ¼Ä¤H¶}©l²¾°Ê
+				// æ•µäººé–‹å§‹ç§»å‹•
 				Thread t = new Thread(et);
 				t.start();
 
@@ -377,7 +375,7 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 	}
 
-	// ªì©lµe­±
+	// åˆå§‹ç•«é¢
 	public void paint(Graphics g) {
 		super.paint(g);
 		g.setColor(Color.BLACK);
@@ -387,17 +385,17 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 		g.fillRect(800, 0, 200, 600);
 		g.fillRect(0, 600, 1000, 250);
 
-		// µe¦Û¤vªº©Z§J
+		// ç•«è‡ªå·±çš„å¦å…‹
 
 		if (mytank.live == true) {
 			this.drawTank(mytank.getX(), mytank.getY(), g, mytank.getDirection(), 0);
 		}
 
-		// µe¼Ä¤H©Z§J
+		// ç•«æ•µäººå¦å…‹
 		for (int i = 0; i < ets.size(); i++) {
 			EnemyTank et = ets.get(i);
 
-			// ets.get(i) -> ²Äi¥x©Z§J
+			// ets.get(i) -> ç¬¬iå°å¦å…‹
 			if (et.live == true) {
 
 				this.drawTank(et.x, et.y, g, et.direction, 1);
@@ -428,10 +426,10 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 		}
 
-		// µe¦Û¤vªº¤l¼u
+		// ç•«è‡ªå·±çš„å­å½ˆ
 		g.setColor(Color.RED);
 		for (int i = 0; i < mytank.blts.size(); i++) {
-			// mytank.ss.get(i) ¡X> ·í«e¤l¼u
+			// mytank.ss.get(i) â€”> ç•¶å‰å­å½ˆ
 			Bullet blt = mytank.blts.get(i);
 			if (blt.live == true) {
 
@@ -448,12 +446,12 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 				}
 
 			}
-			// ²¾°£¤l¼u
+			// ç§»é™¤å­å½ˆ
 			if (blt.live == false)
 				mytank.blts.remove(blt);
 		}
 
-		// µe¥XÃz¬µ
+		// ç•«å‡ºçˆ†ç‚¸
 
 		for (int i = 0; i < booms.size(); i++) {
 
@@ -470,12 +468,12 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 				booms.remove(bm);
 
 		}
-		// ´£¥Ü°T®§
+		// æç¤ºè¨Šæ¯
 		drawInfo(g);
 
 	}
 
-	// µe´£¥Ü°T®§¤èªk
+	// ç•«æç¤ºè¨Šæ¯æ–¹æ³•
 	public void drawInfo(Graphics g) {
 
 		Font font = new Font("Dialog", Font.BOLD, 20);
@@ -491,11 +489,11 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 		g.setFont(font);
 
 		g.setColor(Color.red);
-		g.drawString("Á`±ş¼Ä¼Æ¡G" + Record.getKillEnemyNum(), 800, 300);
+		g.drawString("ç¸½æ®ºæ•µæ•¸ï¼š" + Record.getKillEnemyNum(), 800, 300);
 
 	}
 
-	// µe©Z§J¤èªk
+	// ç•«å¦å…‹æ–¹æ³•
 	public void drawTank(int x, int y, Graphics g, int direction, int type) {
 		switch (type) {
 		case 0:
@@ -509,61 +507,61 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 		switch (direction) {
 		case 0:
-			// ¥ª¯x§Î
+			// å·¦çŸ©å½¢
 			g.fill3DRect(x - 20, y - 25, 10, 52, false);
-			// ¥k¯x§Î
+			// å³çŸ©å½¢
 			g.fill3DRect(x + 10, y - 25, 10, 52, false);
-			// ¤¤¶¡¯x§Î
+			// ä¸­é–“çŸ©å½¢
 			g.fill3DRect(x - 12, y - 15, 30, 32, false);
-			// ¶ê§Î
+			// åœ“å½¢
 			g.fillOval(x - 10, y - 10, 20, 20);
-			// ¯¥ºŞ
+			// ç ²ç®¡
 			g.drawLine(x, y, x, y - 30);
 			break;
 
 		case 1:
-			// ¥ª¯x§Î
+			// å·¦çŸ©å½¢
 			g.fill3DRect(x - 25, y - 20, 52, 10, false);
-			// ¥k¯x§Î
+			// å³çŸ©å½¢
 			g.fill3DRect(x - 25, y + 10, 52, 10, false);
-			// ¤¤¶¡¯x§Î
+			// ä¸­é–“çŸ©å½¢
 			g.fill3DRect(x - 15, y - 12, 32, 30, false);
-			// ¶ê§Î
+			// åœ“å½¢
 			g.fillOval(x - 10, y - 10, 20, 20);
-			// ¯¥ºŞ
+			// ç ²ç®¡
 			g.drawLine(x, y, x + 32, y);
 			break;
 
 		case 2:
-			// ¥ª¯x§Î
+			// å·¦çŸ©å½¢
 			g.fill3DRect(x - 20, y - 25, 10, 52, false);
-			// ¥k¯x§Î
+			// å³çŸ©å½¢
 			g.fill3DRect(x + 10, y - 25, 10, 52, false);
-			// ¤¤¶¡¯x§Î
+			// ä¸­é–“çŸ©å½¢
 			g.fill3DRect(x - 12, y - 15, 30, 32, false);
-			// ¶ê§Î
+			// åœ“å½¢
 			g.fillOval(x - 10, y - 10, 20, 20);
-			// ¯¥ºŞ
+			// ç ²ç®¡
 			g.drawLine(x, y, x, y + 32);
 			break;
 
 		case 3:
-			// ¥ª¯x§Î
+			// å·¦çŸ©å½¢
 			g.fill3DRect(x - 25, y - 20, 52, 10, false);
-			// ¥k¯x§Î
+			// å³çŸ©å½¢
 			g.fill3DRect(x - 25, y + 10, 52, 10, false);
-			// ¤¤¶¡¯x§Î
+			// ä¸­é–“çŸ©å½¢
 			g.fill3DRect(x - 15, y - 12, 32, 30, false);
-			// ¶ê§Î
+			// åœ“å½¢
 			g.fillOval(x - 10, y - 10, 20, 20);
-			// ¯¥ºŞ
+			// ç ²ç®¡
 			g.drawLine(x, y, x - 32, y);
 			break;
 		}
 
 	}
 
-	// §PÂ_§Ú¬O§_À»¤¤¼Ä¤H
+	// åˆ¤æ–·æˆ‘æ˜¯å¦æ“Šä¸­æ•µäºº
 	public void shotEnemy() {
 		for (int i = 0; i < mytank.blts.size(); i++) {
 			Bullet blt = mytank.blts.get(i);
@@ -586,7 +584,7 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 		}
 	}
 
-	// §PÂ_¼Ä¤H¬O§_À»¤¤§Ú
+	// åˆ¤æ–·æ•µäººæ˜¯å¦æ“Šä¸­æˆ‘
 	public void shotMytank() {
 
 		for (int i = 0; i < ets.size(); i++) {
@@ -607,7 +605,7 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 	}
 
-	// ®ø·À©Z§J¤èªk
+	// æ¶ˆæ»…å¦å…‹æ–¹æ³•
 
 	public boolean aceTank(Bullet blt, Tank tank) {
 
@@ -622,7 +620,7 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 				b = true;
 
-				// «Ø¥ßÃz¬µ
+				// å»ºç«‹çˆ†ç‚¸
 				Boom bm = new Boom(tank.x - 22, tank.y - 22);
 				this.music.startBoom();
 				booms.add(bm);
@@ -637,7 +635,7 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 				b = true;
 
-				// «Ø¥ßÃz¬µ
+				// å»ºç«‹çˆ†ç‚¸
 				Boom bm = new Boom(tank.x - 22, tank.y - 22);
 				booms.add(bm);
 
@@ -649,12 +647,12 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 
 	}
 
-	// Áä½L¨Æ¥ó
+	// éµç›¤äº‹ä»¶
 	@Override
 	public void keyPressed(KeyEvent e) {
 		// TODO Auto-generated method stub
 
-		// ²¾°Ê
+		// ç§»å‹•
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
 			this.mytank.down();
 			}
@@ -676,7 +674,7 @@ class GamePanel extends JPanel implements KeyListener, Runnable {
 	public void keyReleased(KeyEvent e) {
 		// TODO Auto-generated method stub
 
-		// §ğÀ»
+		// æ”»æ“Š
 		if (e.getKeyCode() == KeyEvent.VK_Z) {
 			if (this.mytank.blts.size() <= 5 && mytank.live == true)
 				this.mytank.shot();
