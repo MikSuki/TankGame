@@ -24,8 +24,7 @@ public class Tank1 extends JFrame implements ActionListener{
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		//Tank1 tank1 = new Tank1();
-		people a = new people();
+		Tank1 tank1 = new Tank1();
 	}
 
 class people{
